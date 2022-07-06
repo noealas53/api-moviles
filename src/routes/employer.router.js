@@ -1,10 +1,10 @@
-const { createUser, getAllUser, getById } = require('../controllers/employer.controller');
+const { createEmployer, getAllEmployer, getById } = require('../controllers/employer.controller');
 const { Router } = require('express');
 
 const employerRouter = Router();
 
-employerRouter.post('/create', createUser);
+employerRouter.post('/create', createEmployer);
 employerRouter.get('/:id', getById);
-employerRouter.get('/', getAllUser);
+employerRouter.get('/', getAllEmployer);
 
 module.exports = employerRouter;

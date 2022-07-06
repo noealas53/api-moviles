@@ -1,4 +1,4 @@
-const employerModel = require('../models/user.model');
+const employerModel = require('../models/employer.model');
 
 // Create users
 
@@ -10,7 +10,7 @@ exports.createEmployer = async (req, res) => {
         const newEmployer = new employerModel(body);
         await newEmployer.save();
 
-        return res.status(201).json(newUser);
+        return res.status(201).json(newEmployer);
 
     } catch (error) {
         
@@ -26,9 +26,9 @@ exports.getById = async (req, res) => {
 
     try {
         
-        const user = await employerModel.findOne({ _id: params.id });
+        const employer = await employerModel.findOne({ _id: params.id });
 
-        return res.status( user ? 200 : 404 ).json(user);
+        return res.status( employer ? 200 : 404 ).json(employer);
 
     } catch (error) {
 
@@ -39,10 +39,10 @@ exports.getById = async (req, res) => {
 
 // Find all users
 
-exports.getAllUser = async (req, res) => {
+exports.getAllEmployer = async (req, res) => {
 
-    const user = await employerModel.find();
+    const employer = await employerModel.find();
 
-    return res.status(200).json(user);
+    return res.status(200).json(employer);
 
 }

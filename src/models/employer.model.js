@@ -18,4 +18,4 @@ const employerSchema = new Schema({
     }
 });
 
-module.exports = model('employer', userSchema);
+module.exports = model('employer', employerSchema);
