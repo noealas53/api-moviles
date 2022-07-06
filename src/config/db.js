@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const debug = require('debug')('databasejs:server');
+const debug = require('debug')('api-moviles-js:server');
 
 mongoose.connect(process.env.MONGO_URI)
     .then(() => {

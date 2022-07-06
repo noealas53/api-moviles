@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node ./src/bin/www",
-    "dev": "DEBUG=databasejs:* nodemon ./src/bin/www"
+    "dev": "DEBUG=api-moviles-js:* nodemon ./src/bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
