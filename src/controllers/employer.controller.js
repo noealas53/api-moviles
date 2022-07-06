@@ -1,6 +1,6 @@
 const employerModel = require('../models/employer.model');
 
-// Create users
+// Creando empleado
 
 exports.createEmployer = async (req, res) => {
     const { body } = req;
@@ -19,7 +19,7 @@ exports.createEmployer = async (req, res) => {
     }
 }
 
-// Search user by id
+// Buscando empleado por id
 
 exports.getById = async (req, res) => {
     const { params } = req;
@@ -37,7 +37,7 @@ exports.getById = async (req, res) => {
     }
 }
 
-// Find all users
+// Obteniendo todos los empleados registrados
 
 exports.getAllEmployer = async (req, res) => {
 

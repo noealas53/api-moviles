@@ -1,6 +1,6 @@
 const userModel = require('../models/user.model');
 
-// Create users
+// Creando usuario
 
 exports.createUser = async (req, res) => {
     const { body } = req;
@@ -19,7 +19,7 @@ exports.createUser = async (req, res) => {
     }
 }
 
-// Search user by id
+// Buscando usuario por id
 
 exports.getById = async (req, res) => {
     const { params } = req;
@@ -37,7 +37,7 @@ exports.getById = async (req, res) => {
     }
 }
 
-// Find all users
+// Obteniendo todos los usuarios registrados
 
 exports.getAllUser = async (req, res) => {
 

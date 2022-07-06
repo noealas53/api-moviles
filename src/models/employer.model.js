@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 
+// Esquema del empleado
 const employerSchema = new Schema({
     name: {
         type: String,

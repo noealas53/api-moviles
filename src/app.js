@@ -7,6 +7,7 @@ var logger = require('morgan');
 const baseRouter = require('./routes/base.router');
 
 var app = express();
+// las configuraciones de db
 require('./config/db')
 
 // view engine setup
@@ -19,6 +20,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Las rutas las ponemos en baseRouter
 app.use('/', baseRouter);
 
 // catch 404 and forward to error handler
