@@ -14,8 +14,9 @@ const userSchema = new Schema({
         required: true,
     },
     dui: {
-        type: String,
+        type: Number,
         required: true,
+        minlength: 9,
     }
 });
 

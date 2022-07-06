@@ -1,5 +1,7 @@
 const userModel = require('../models/user.model');
 
+// Create users
+
 exports.createUser = async (req, res) => {
     const { body } = req;
 
@@ -17,6 +19,8 @@ exports.createUser = async (req, res) => {
     }
 }
 
+// Search user by id
+
 exports.getById = async (req, res) => {
     const { params } = req;
 
@@ -33,11 +37,11 @@ exports.getById = async (req, res) => {
     }
 }
 
-exports.getAllUser = async (req, res) => {
-    const { query } = req;
-    const { limit } = query;
+// Find all users
 
-    const user = await userModel.find().limit(limit);
+exports.getAllUser = async (req, res) => {
+
+    const user = await userModel.find();
 
     return res.status(200).json(user);
 
