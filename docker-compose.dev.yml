@@ -1,6 +1,9 @@
 version: "3"
 services:
   api:
+    environment:
+      - MONGO_URI=mongodb+srv://admin:manchitas@cluster0.tvsysh1.mongodb.net/?retryWrites=true&w=majority
+      - JWT_SECRET=manchitas
     build: .
     ports:
       - "3000:3000"
