@@ -8,7 +8,7 @@ const baseRouter = require('./routes/base.router');
 
 var app = express();
 // las configuraciones de db
-require('./config/db')
+require('./config/db');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

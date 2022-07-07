@@ -1,5 +1,6 @@
 const { createUser, getAllUser, getById } = require('../controllers/user.controller');
 const { Router } = require('express');
+const passport = require('passport');
 
 const userRouter = Router();
 
